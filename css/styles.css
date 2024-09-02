@@ -106,6 +106,7 @@ p {
     border: 2px solid white;
 }
 
+/*
 .b2 {
     background-color: transparent;
     color: white;
@@ -124,6 +125,7 @@ p {
     border: 2px solid #2196F3;
     color: white;
 }
+*/
 
 
 
@@ -295,6 +297,10 @@ nav a {
     background-color: #0A192F;
 }
 
+#experience p {
+    margin: 1rem 0;
+}
+
 .wrapper {
     display: flex;
     max-width: 1280px;
@@ -304,7 +310,6 @@ nav a {
 }
 
 .wrapper .wrapper_left {
-    width: 250px;
     height: 100%;
     padding-right: 50px;
     display: flex;
@@ -327,7 +332,6 @@ nav a {
     padding: 10px;
     position: relative;
     overflow: hidden;
-    width: 200px;
     transition: all 0.4s ease;
     cursor: pointer;
 }
@@ -433,15 +437,22 @@ nav a {
 #work .row {
     display: flex;
     align-items: center;
-    padding: 2.5rem 5.5rem;
+    padding: 1.5rem 5.5rem;
     border: 3px solid #0A192F;
     background-color: #EDF4FF;
     margin-top: -3px;
 }
 
 #work .row:hover {
-    background-color: coral;
+    background-color: #2196F3;
+    color: #0A192F;
 }
+
+#work .row:hover h3 {
+    color: #EDF4FF;
+}
+
+
 
 #work .col-right {
     padding-left: 80px;
@@ -501,7 +512,7 @@ footer p {
     padding-left: 1.5rem;
 }
 
-#contact a {
+#contact .col-right a {
     color: #0A192F;
 }
 
