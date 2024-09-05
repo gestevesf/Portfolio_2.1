@@ -532,6 +532,7 @@ footer p {
     /* Resets */
     body {
         font-size: 18px;
+        max-width: 768px;
     }
 
 
@@ -561,6 +562,11 @@ footer p {
 
 
     /* Navigation */
+    
+    header {
+        margin: 0 0.5rem;
+        width: -webkit-fill-available;
+    }
 
     nav {
         padding: 1rem;
@@ -576,16 +582,14 @@ footer p {
         transition: 0.3s;
     }
 
-    #nav-fixed.scrolled .nav-menu {
-        background-color: white;
-    }
-
     .nav-menu.active {
         left: 0;
+        width: 96%;
+        margin: 0.5rem;
     }
 
     .nav-item {
-        margin: 2.5rem 0;
+        margin: 2rem 0;
     }
 
     .hamburger {
@@ -609,11 +613,6 @@ footer p {
         width: 50px;
     }
     
-    .logo-blue {
-        width: 50px;
-        display: none;
-    }
-    
 
     /* Button */
     .btn {
@@ -621,45 +620,60 @@ footer p {
         width: 100%;
     }
 
-    .b2 {
-        max-width: 100%;
-    }
-
-    .b3 {
-        max-width: 100%;
-    }
-
     /* Hero Section */
     .hero {
         display: flex;
         align-items: center;
         justify-content: center;
-    
-        background-image: url(../img/background-fold-phone@2x.jpg);
+        flex-direction: column-reverse;
+        margin: 1.5rem 0.5rem;
     }
     
     .intro-text {
-        margin: 2rem;
-        margin-top: -250px;
+        padding: 1.5rem;
+    }
+
+    #intro .col-right {
+        width: 100%;
+        margin-bottom: -8px;
+    }
+
+    #intro .col-left {
+        width: 100%;
     }
 
 
     /* About Section*/
     #about {
-        padding: 100px 2.5rem 0;
+        margin: 1.5rem 0.5rem;
         align-items: flex-start;
+    }
+
+    #about h2 {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .about-text {
+        padding: 1.5rem;
     }
 
 
     /* Experience Section */
     #experience {
-        padding: 100px 2.5rem 0;
+        margin: 1.5rem 0.5rem;
         align-items: flex-start;
+    }
+
+    #experience h2 {
+        width: 100%;
+        padding: 1.5rem;
     }
 
     .wrapper {
         flex-direction: column;
-        gap: 50px;
+        gap: 24px;
+        padding: 1.5rem;
     }
 
     .wrapper .wrapper_right {
@@ -677,54 +691,70 @@ footer p {
 
     /* Work Section */
     #work {
-        padding-top: 100px;
-
+        margin: 1.5rem 0.5rem;
+        padding: 0rem;
     }
 
     #work h2{
-        padding: 0 2.5rem;
+        padding: 1.5rem;
         justify-content: flex-start;
     }
 
     #work h3 {
-        font-size: 1.802rem;
-        padding-bottom: 0.7rem;
+        font-size: 1.502rem;
+        padding-bottom: 0;
     }
 
-    .project-inner {
-        padding: 40px 2.5rem;
+    #work h4 {
+        margin: auto;
     }
 
-    .project1 {
-        background-image: url(../img/project-1-phone@2x.jpg);
-        height: 100vh;
-        width: 100vw;
+    #work p {
+        display: none;
     }
-    
-    .project2 {
-        background-image: url(../img/project-2-phone@2x.jpg);
-        height: 100vh;
-        width: 100vw;
+
+    #work img {
+        width: 100px;
+        height: 100px;
     }
-    
-    .project3 {
-        background-image: url(../img/project-1-phone@2x.jpg);
-        height: 100vh;
-        width: 100vw;
+
+    #work .row {
+        padding: 1.5rem;
+    }
+
+    #work .col-right{
+        padding-left: 1.5rem;
     }
 
     /* Footer Section */
     footer {
-        padding: 100px 2.5rem 0;
+        margin: 0 0.5rem;
     }
+
+    footer p {
+        padding: 1.5rem;
+        font-size: smaller;
+    }
+
     #contact {
-        padding-bottom: 100px;
-        gap: 50px;
-        flex-direction: column;
+        width: 100%;
+    }
+
+    #contact ul {
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     #contact ul li {
         margin-left: 20px;
+    }
+
+    #contact .col-left {
+        padding: 1.5rem;
+    }
+
+    #contact .col-right {
+        padding: 1.5rem;
     }
 }
 
@@ -732,11 +762,6 @@ footer p {
     /* Styles for tablets */
     nav {
         padding: 1.3rem 3.5rem;
-    }
-
-    .hero {
-        align-items: flex-start;
-        background-image: url(../img/background-fold-tablet@2x.jpg);
     }
 
     .intro-text {
