@@ -49,6 +49,16 @@ a:hover {
     font-weight: 600;
 } 
 
+header, main, footer {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+section {
+    margin: 40px 0;
+}
+
 
 
 /* Headings */
@@ -98,6 +108,7 @@ p {
     border: 2px solid #2196F3;
     width: auto;
     margin-top: 40px;
+    border-radius: 12px;
 }
 
 .btn:hover {
@@ -132,12 +143,15 @@ p {
 /* Nav Bar */
 header {
     position: sticky;
-    top: 0;
-    width: 100%;
+    top: 10px;
+    /*width: 100%;
     max-width: 1280px;
-    margin: 0 80px;
+    margin: 0 80px;*/
     z-index: 1;
     border: 3px solid #0A192F;
+    background-color: #0A192F;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
 }
 
 nav {
@@ -145,7 +159,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1.3rem 5.5rem;
-    background-color: #0A192F;
 }
 
 nav a {
@@ -226,8 +239,8 @@ nav a {
 .hero {
     display: flex;
     justify-content: space-between;
-    max-width: 1280px;
-    margin: 80px 80px;
+    /*max-width: 1280px;
+    margin: 80px 80px;*/
     object-fit: contain;
     /*background-image: url(../img/background-fold@2x.jpg);
     background-size: cover;
@@ -238,6 +251,7 @@ nav a {
 
 #intro .col-left {
     width: 65%;
+    border-radius: 16px 0 0 16px;
 }
 
 #intro .col-right {
@@ -256,23 +270,25 @@ nav a {
     height: 100%;
     width: 100%;
     border: 3px solid #0A192F;
+    border-radius: 0 16px 16px 0;
 }
 
 
 
 /* About Section */
 #about {
-    margin: 80px 80px;
+    /*margin: 80px 80px;
+    max-width: 1280px;*/
     display: flex;
     flex-direction: column;
-    max-width: 1280px;
 }
 
 #about h2 {
-    color: #2196F3;
+    color: #EDF4FF;
     background-color: #0A192F;
     padding: 2.5rem 5.5rem;
     border: 3px solid #0A192F;
+    border-radius: 16px 16px 0 0
 }
 
 .about-text {
@@ -280,23 +296,25 @@ nav a {
     border: 3px solid #0A192F;
     margin-top: -3px;
     background-color: #EDF4FF;
+    border-radius: 0 0 16px 16px
 }
 
 
 
 /* Experience Section */
 #experience {
-    margin: 80px;
+    /*margin: 80px;
+    max-width: 1280px;*/
     display: flex;
     flex-direction: column;
-    max-width: 1280px;
 }
 
 #experience h2 {
-    color: #2196F3;
+    color: #EDF4FF;
     padding: 2.5rem 5.5rem;
     border: 3px solid #0A192F;
     background-color: #0A192F;
+    border-radius: 16px 16px 0 0
 }
 
 #experience p {
@@ -308,6 +326,7 @@ nav a {
     padding: 2.5rem 5.5rem;
     border: 3px solid;
     background-color: #EDF4FF;
+    border-radius: 0 0 16px 16px
 }
 
 .wrapper .wrapper_left {
@@ -401,16 +420,17 @@ nav a {
 #work {
     display: flex;
     flex-direction: column;
-    margin: 80px;
-    max-width: 1280px;
+    /*margin: 80px;
+    max-width: 1280px;*/
 }
 
 #work h2 {
-    color: #2196F3;
+    color: #EDF4FF;
     padding: 2.5rem 5.5rem;
     display: flex;
     border: 3px solid #0A192F;
     background-color: #0A192F;
+    border-radius: 16px 16px 0 0
 }
 
 #work h3 {
@@ -427,9 +447,25 @@ nav a {
 }
 
 #work a:hover {
-    color: var(--primary-color);
     font-weight: 400;
+    color: #0A192F;
+}
+
+#work .row:hover h3 {
+    color: #0A192F;
+}
+
+#work a.project1:hover {
+    background-color: var(--secondary-color);
 } 
+
+#work a.project2:hover {
+    background-color: #F9CEDF;
+}
+
+#work a.project3:hover {
+    background-color: #9C212D;
+}
 
 #work img {
     width: 200px;
@@ -445,16 +481,9 @@ nav a {
     margin-top: -3px;
 }
 
-#work .row:hover {
-    background-color: #2196F3;
-    color: #0A192F;
+#work .row:last-child {
+    border-radius: 0 0 16px 16px
 }
-
-#work .row:hover h3 {
-    color: #EDF4FF;
-}
-
-
 
 #work .col-right {
     padding-left: 80px;
@@ -480,15 +509,17 @@ footer p {
     margin-top: -3px;
     width: 100%;
     text-align: center;
+    border-radius: 0 0 16px 16px;
 }
 
 #contact {
     display: flex;
-    width: 1280px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     background-color: #0A192F;
     color: white;
+    border-radius: 16px 16px 0 0;
 }
 
 #contact .col-left {
@@ -510,9 +541,7 @@ footer p {
 }
     
 #contact ul li {
-    list-style-type: disc;
-    line-height: 2.5rem;
-    padding-left: 1.5rem;
+    font-size: larger;
 }
 
 #contact .col-right a {
@@ -522,6 +551,7 @@ footer p {
 #contact a:hover {
     color: #2196F3;
     font-weight: 600;
+    transition: none;
 }
 
 
@@ -535,7 +565,16 @@ footer p {
     /* Resets */
     body {
         font-size: 18px;
+    }
+
+    header, main, footer {
+        width: 90%;
         max-width: 768px;
+        margin: 0 auto;
+    }
+    
+    section {
+        margin: 40px auto;
     }
 
 
@@ -564,15 +603,11 @@ footer p {
     }
 
 
+
     /* Navigation */
-    
-    header {
-        margin: 0 0.5rem;
-        width: -webkit-fill-available;
-    }
 
     nav {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .nav-menu {
@@ -586,9 +621,9 @@ footer p {
     }
 
     .nav-menu.active {
-        left: 0;
-        width: 96%;
-        margin: 0.5rem;
+        left: 5%;
+        width: 90%;
+        border-radius: 0 0 16px 16px;
     }
 
     .nav-item {
@@ -629,7 +664,10 @@ footer p {
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
-        margin: 1.5rem 0.5rem;
+    }
+
+    .hero img {
+        border-radius: 16px 16px 0 0;
     }
     
     .intro-text {
@@ -643,12 +681,14 @@ footer p {
 
     #intro .col-left {
         width: 100%;
+        border-radius: 0 0 16px 16px;
     }
+
+
 
 
     /* About Section*/
     #about {
-        margin: 1.5rem 0.5rem;
         align-items: flex-start;
     }
 
@@ -664,7 +704,6 @@ footer p {
 
     /* Experience Section */
     #experience {
-        margin: 1.5rem 0.5rem;
         align-items: flex-start;
     }
 
@@ -694,7 +733,6 @@ footer p {
 
     /* Work Section */
     #work {
-        margin: 1.5rem 0.5rem;
         padding: 0rem;
     }
 
@@ -730,10 +768,6 @@ footer p {
     }
 
     /* Footer Section */
-    footer {
-        margin: 0 0.5rem;
-        width: -webkit-fill-available;
-    }
 
     footer p {
         padding: 1.5rem;
@@ -752,7 +786,7 @@ footer p {
     }
 
     #contact ul li {
-        margin-left: 20px;
+        margin: 0 20px;
     }
 
     #contact .col-left {
@@ -764,62 +798,242 @@ footer p {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
     /* Styles for tablets */
     
-    header {
-        margin: 0 3.5rem;
+
+    header, main, footer {
+        width: 90%;
+        max-width: 991px;
+        margin: 0 auto;
+    }
+    
+    section {
+        margin: 40px auto;
     }
 
+
+
+    /* Headings */
+    h1 {
+        font-size: 2.327rem;
+        margin: 0.8rem 0;
+    }
+    
+    h2 {
+        font-size: 2.102rem;
+    }
+    
+    h3 {
+        font-size: 1.724rem;
+    }
+    
+    h4 {
+        font-size: 1.125rem;
+        margin: 1.7rem 0 0.7rem;
+    }
+    
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.8rem;
+    }
+
+
+
+    /* Navigation */
+
     nav {
-        padding: 1.3rem 3.5rem;
+        padding: 1.5rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #0A192F;
+        width: 100%;
+        transition: 0.3s;
     }
 
     .nav-menu.active {
-        width: 97.9%;
+        left: 5%;
+        width: 90%;
+        border-radius: 0 0 16px 16px;
     }
 
-    .hero {
-        margin: 3.5rem;
+    .nav-item {
+        margin: 2rem 0;
     }
 
-    #about, #experience, #work {
-        margin: 2.5rem 3.5rem;
+    .hamburger {
+        display: block;
+        cursor: pointer;
     }
 
-    .project-inner {
-        padding: 75px 3.5rem;
+    .bar {
+        width: 40px;
+        height: 3px;
+        margin: 7px auto;
     }
 
-    footer {
-        margin: 0 3.5rem;
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+    
+    .logo-white {
+        width: 60px;
+    }
+    
+
+
+    /* Button */
+    .btn {
+        padding: 20px 30px;
+        width: 100%;
+    }
+
+
+
+    /* Hero Section */
+    
+    .intro-text {
+        padding: 2.5rem 1.5rem;
+    }
+
+
+
+    /* About Section*/
+    #about {
+        align-items: flex-start;
+    }
+
+    #about h2 {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .about-text {
+        padding: 1.5rem;
+    }
+
+
+    /* Experience Section */
+    #experience {
+        align-items: flex-start;
+    }
+
+    #experience h2 {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 24px;
+        padding: 1.5rem;
+    }
+
+    .wrapper .wrapper_right {
+        width: 100%;
+    }
+
+    .wrapper .wrapper_left ul li {
+        margin-bottom: 10px;
+    }
+
+    .wrapper .wrapper_left ul li h4 {
+        margin: 0.5rem;
+    }
+    
+
+
+    /* Work Section */
+    #work {
+        padding: 0rem;
+    }
+
+    #work h2 {
+        padding: 1.5rem;
+        justify-content: flex-start;
+    }
+
+    #work h3 {
+        font-size: 1.724rem;
+        padding-bottom: 0;
+    }
+
+    #work h4 {
+        margin: auto;
+    }
+
+    #work p {
+        display: none;
+    }
+
+    #work img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #work .row {
+        padding: 1.5rem;
+    }
+
+    #work .col-right{
+        padding-left: 1.5rem;
+    }
+
+
+
+    /* Footer Section */
+
+    footer p {
+        padding: 1.5rem;
+        font-size: smaller;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    #contact {
+        width: 100%;
+    }
+
+    #contact ul {
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     #contact ul li {
-        line-height: none;
-        padding-left: 0.5rem;
-        margin: 0 0.5rem;
+        margin: 10px 20px;
     }
 
+    #contact .col-left {
+        padding: 2.5rem 1.5rem;
+    }
+
+    #contact .col-right {
+        padding: 1.5rem;
+    }
 }
+
+
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     /* Styles for small desktops */
 
-    header {
-        width: -webkit-fill-available;
-    }
-
     nav {
         padding: 1.3rem 2.5rem;
-    }
-
-    .hero {
-        max-width: 980px;
-    }
-
-    footer {
-        margin: 0 5.5rem;
     }
 
     footer p {
