@@ -613,7 +613,7 @@ footer p {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 3.7rem;
+        top: 4.5rem;
         flex-direction: column;
         background-color: #0A192F;
         width: 100%;
